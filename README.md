@@ -1,25 +1,31 @@
 # mcp-clinicaltrials
 
-MCP server for [ClinicalTrials.gov](https://clinicaltrials.gov) API v2. Search and retrieve clinical study data. No API key required.
+Search ClinicalTrials.gov for clinical studies, interventions, and outcomes.
+
+> **Free API** — No API key required.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `search_studies` | Search by condition, drug, keyword with status/phase/type filters |
-| `get_study` | Get full details for a study by NCT ID |
-| `get_study_results` | Get outcomes/results for completed studies |
-| `search_by_location` | Find trials near a geographic location |
-| `get_study_sizes` | Get total count of matching studies |
+| `search_studies` | Search ClinicalTrials.gov for clinical studies by condition, intervention, or keyword. |
+| `get_study` | Get detailed information about a specific clinical study by NCT ID. |
+| `get_study_results` | Get results/outcomes for a completed clinical study. |
+| `search_by_location` | Search clinical trials by geographic location. |
+| `get_study_sizes` | Get aggregate statistics about studies matching a query (counts by status, phase, etc.). |
 
-## Install
+## Installation
 
 ```bash
+git clone https://github.com/PetrefiedThunder/mcp-clinicaltrials.git
+cd mcp-clinicaltrials
 npm install
 npm run build
 ```
 
 ## Usage with Claude Desktop
+
+Add to your `claude_desktop_config.json`:
 
 ```json
 {
@@ -32,12 +38,11 @@ npm run build
 }
 ```
 
-## Examples
+## Usage with npx
 
-- Find recruiting cancer trials: `search_studies(query: "lung cancer", status: "RECRUITING")`
-- Phase 3 diabetes trials: `search_studies(query: "diabetes", phase: "PHASE3")`
-- Trials near LA: `search_by_location(query: "alzheimer", locationStr: "Los Angeles", distance: "50mi")`
-- Study details: `get_study(nctId: "NCT05678901")`
+```bash
+npx mcp-clinicaltrials
+```
 
 ## License
 
