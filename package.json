@@ -1,7 +1,7 @@
 {
   "name": "mcp-clinicaltrials",
   "version": "1.0.0",
-  "description": "MCP server for ClinicalTrials.gov \u2014 search clinical studies",
+  "description": "MCP server for ClinicalTrials.gov — search clinical studies",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
@@ -16,7 +16,7 @@
     "medical"
   ],
   "author": "",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "type": "module",
   "engines": {
     "node": ">=20"
